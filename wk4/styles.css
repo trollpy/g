@@ -1,0 +1,143 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --primary-color: #4b9cd3;
+  --background: #f9f9f9;
+  --text-color: #333;
+  --card-bg: #fff;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--background);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #e0f7ff;
+}
+
+/* Intro Section */
+.intro {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: white;
+}
+
+.intro h1 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.intro p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Topics Section */
+.topics {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.topic-card {
+  background: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.topic-card:hover {
+  transform: translateY(-5px);
+}
+
+.topic-card h2 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.topic-card code {
+  background-color: #e0f0fa;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #e9f4fa;
+  color: #555;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .topics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .intro h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .site-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}

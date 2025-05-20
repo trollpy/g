@@ -1,0 +1,148 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 20%);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.register-trigger {
+    background: #fff;
+    color: #764ba2;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.register-trigger:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.form-container {
+    position: absolute;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    z-index: 10;
+}
+
+.container:hover .form-container {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.registration-form h2 {
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+    position: relative;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e6e6e6;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #764ba2;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(118, 75, 162, 0.2);
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+    height: 14px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(to right, #5a6fd1, #6a4399);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.login-link {
+    margin-top: 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #764ba2;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Input error state */
+.form-group.error input {
+    border-color: #e74c3c;
+}
+
+.form-group.success input {
+    border-color: #2ecc71;
+}

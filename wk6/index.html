@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="register-trigger">Register</div>
+        <div class="form-container">
+            <form id="registrationForm" class="registration-form">
+                <h2>Create Account</h2>
+                <div class="form-group">
+                    <input type="text" id="fullname" name="fullname" placeholder="Full Name">
+                    <span class="error-message" id="fullname-error"></span>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Email Address">
+                    <span class="error-message" id="email-error"></span>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" name="password" placeholder="Password">
+                    <span class="error-message" id="password-error"></span>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
+                    <span class="error-message" id="confirmPassword-error"></span>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+                    <span class="error-message" id="phone-error"></span>
+                </div>
+                <button type="submit" class="submit-btn">Sign Up</button>
+                <p class="login-link">Already have an account? <a href="#">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

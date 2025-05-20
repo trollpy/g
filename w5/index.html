@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Space Explorer</h1>
+        <div class="space-scene">
+            <div class="planet"></div>
+            <div id="rocket" class="rocket">🚀</div>
+            <div id="stars-container"></div>
+        </div>
+        
+        <div class="control-panel">
+            <h2 id="mission-status">Mission Status: Awaiting Launch</h2>
+            <div class="button-container">
+                <button id="launch-btn" class="control-btn">Launch Rocket</button>
+                <button id="toggle-btn" class="control-btn">Toggle Night Mode</button>
+                <button id="add-alien-btn" class="control-btn">Add Alien</button>
+            </div>
+            <div class="fuel-container">
+                <label for="fuel">Rocket Fuel:</label>
+                <progress id="fuel" value="100" max="100"></progress>
+                <span id="fuel-percentage">100%</span>
+            </div>
+        </div>
+        
+        <div id="alien-container" class="alien-container"></div>
+        
+        <div class="messages">
+            <p id="message-display">Welcome, Commander! Your mission awaits.</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
